@@ -1,3 +1,9 @@
+
+# Designs-
+Simplified version of my projects designs
+
+```mermaid
+
 graph TD
     A[Member Health Data] --> B[Data Preprocessor]
     B --> C[Probabilistic Bayesian Neural Network]
