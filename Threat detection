@@ -1,5 +1,6 @@
 # Designs-
 Simplified version of my projects designs
+
 ```mermaid
 graph TD
     A[Structured Data Input] --> B[Isolation Forest]
