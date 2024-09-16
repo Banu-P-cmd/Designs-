@@ -1,33 +1,31 @@
-# Designs-
-Simplified version of my projects designs
-
-```mermaid
 graph TD
-    A[Structured Data Input] --> B[Isolation Forest]
-    B --> C{Anomaly Detector}
-    C -->|Anomalies| D[Anomaly ID Extractor]
-    D --> E[Text Data Retriever]
-    F[Unstructured Data Store] --> E
-    E --> G[T5 Model]
-    G -->|Classification & Summary| H[Feature Combiner]
-    C -->|Anomaly Structured Data| I[Structured Feature Extractor]
-    I --> H
-    J[Additional Structured Data] --> H
-    H --> K[RLAIF Neural Network]
-    K --> L[Threat Assessment Output]
-    L --> M[Feedback Mechanism]
-    M --> N[RLAIF Learning Module]
-    N --> O{Update Components}
-    O --> P[Update RLAIF NN Weights]
-    O --> Q[Adjust Isolation Forest Threshold]
-    O --> R[Fine-tune T5 Model]
-    O --> S[Modify Feature Combination Weights]
-    P --> K
-    Q --> B
-    R --> G
-    S --> H
+    A[Member Health Data] --> B[Data Preprocessor]
+    B --> C[Probabilistic Bayesian Neural Network]
+    B --> D[Interpretable Causal Inference Model]
+    C --> E[Recommendation Generator]
+    D --> E
+    E --> F[Next-Best Action Recommendation]
+    F --> G[Member Interaction]
+    G --> H[Feedback Collector]
+    H --> I[Bias Detection Module]
+    I --> J[Model Update Manager]
+    J --> |Update PBNN| C
+    J --> |Update Causal Model| D
+    J --> |Update Preprocessor| B
 
-    classDef mainFlow fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
-    classDef feedbackFlow fill:#fff8e1,stroke:#ffa000,stroke-width:2px;
-    class A,B,C,D,E,F,G,H,I,J,K,L mainFlow;
-    class M,N,O,P,Q,R,S feedbackFlow;
+    subgraph "Recommendation Engine Core"
+    C
+    D
+    E
+    end
+
+    subgraph "Feedback Loop System"
+    H
+    I
+    J
+    end
+
+    classDef core fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef feedback fill:#fcf,stroke:#333,stroke-width:2px;
+    class C,D,E core;
+    class H,I,J feedback;
