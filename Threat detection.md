@@ -4,8 +4,7 @@ Simplified version of my projects designs
 ```mermaid
 
    %%{init: {'theme': 'dark', 'themeVariables': { 'primaryColor': '#ff9800', 'lineColor': '#a0a0a0'}}}%%
-
-   graph TD
+graph TD
     A[Structured Data Input] -->|1| B[Anomaly Detection Module<br/>Isolation Forest]
     F[Unstructured Data Input] -->|2| G[Feature Extraction]
     G -->|3| H[Unstructured Data Features]
@@ -64,6 +63,7 @@ Simplified version of my projects designs
     class S,T,U,V,W update;
     class HL fill:#ff9800,stroke:#ffb74d,stroke-width:2px,color:#fff3e0;
 
+    
     
 
     
