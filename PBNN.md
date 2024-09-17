@@ -20,6 +20,11 @@ graph TD
     J -->|Update Causal Model| D
     J -->|Update Preprocessor| B
 
+    %% Human Feedback Flow
+    G -->|Human Feedback| HF[Human Feedback Loop]
+    HF -->|Bias and Quality Feedback| H
+    HF -->|Model Performance Evaluation| J
+
     subgraph "Recommendation Engine Core"
     C
     D
@@ -30,6 +35,7 @@ graph TD
     H
     I
     J
+    HF
     end
 
     classDef default fill:#2d2d2d,stroke:#c0c0c0,stroke-width:2px,color:#f0f0f0;
@@ -40,6 +46,10 @@ graph TD
 
     class A input;
     class C,D,E core;
-    class H,I,J feedback;
+    class H,I,J,HF feedback;
     class F output;
+
+
+
+    
    
