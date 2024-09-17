@@ -3,7 +3,8 @@ Simplified version of my projects designs
 
 ```mermaid
 
-    graph TD
+   %%{init: {'theme': 'dark', 'themeVariables': { 'primaryColor': '#ff9800', 'lineColor': '#a0a0a0'}}}%%
+graph TD
     A[Structured Data Input] -->|1| B[Anomaly Detection Module<br/>Isolation Forest]
     F[Unstructured Data Input] -->|2| G[Feature Extraction]
     G -->|3| H[Unstructured Data Features]
@@ -30,11 +31,12 @@ Simplified version of my projects designs
     U -->|19| N
     V -->|20| Q
 
-    classDef dataInput fill:#e0f7fa,stroke:#00838f,stroke-width:1px;
-    classDef processing fill:#e8eaf6,stroke:#1a237e,stroke-width:1px;
-    classDef feedback fill:#fff3e0,stroke:#ff6f00,stroke-width:1px;
-    classDef update fill:#f3e5f5,stroke:#6a1b9a,stroke-width:1px;
+    classDef dataInput fill:#4caf50,stroke:#81c784,stroke-width:2px,color:#e8f5e9;
+    classDef processing fill:#2196f3,stroke:#64b5f6,stroke-width:2px,color:#e3f2fd;
+    classDef feedback fill:#ff9800,stroke:#ffb74d,stroke-width:2px,color:#fff3e0;
+    classDef update fill:#e91e63,stroke:#f06292,stroke-width:2px,color:#fce4ec;
     class A,F dataInput;
-    class B,G,I,K,L,N processing;
+    class B,G,I,K,L,N,C,H,J,M,O processing;
     class P,Q,R feedback;
-    class S,T,U,V update;
+    class S,T,U,V update; 
+   
