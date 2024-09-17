@@ -8,28 +8,31 @@ Simplified version of my projects designs
     F[Unstructured Data Input] -->|2| G[Feature Extraction]
     G -->|3| H[Unstructured Data Features]
     B -->|4| C[Anomalies with Scores]
-    C -->|5| D[Weak Supervision Labeling]
-    D -->|6| E[Weakly Labeled Anomalies]
-    E -->|7| I[Structured Feature Extraction]
+    C -->|5| D[Weak Supervision Module]
+    D -->|6a| E[Weakly Labeled Anomalies]
+    D -->|6b| W[Generated Summaries]
+    E -->|7a| I[Structured Feature Extraction]
+    W -->|7b| I
     I -->|8| J[Structured Data Features]
-    J -->|9| K[Feature Combiner]
-    H -->|10| K
-    K -->|11| L[Threat Classification Module]
-    L -->|12| M[Threat Assessments]
-    M -->|13| N[Explanation Generation Module]
-    N -->|14| O[Explanations]
-    M -->|15| P[Feedback Mechanism]
-    O -->|16| P
-    P -->|17| Q[Reinforcement Learning Module]
-    Q -->|18| R{Update Components}
-    R -->|19| S[Update Anomaly Detection]
-    R -->|20| T[Update Threat Classification]
-    R -->|21| U[Update Explanation Generation]
-    R -->|22| V[Enhance Weak Supervision]
-    S -->|23| B
-    T -->|24| L
-    U -->|25| N
-    V -->|26| D
+    J -->|9a| K[Feature Combiner]
+    H -->|9b| K
+    W -->|9c| K
+    K -->|10| L[Threat Classification Module]
+    L -->|11| M[Threat Assessments]
+    M -->|12| N[Explanation Generation Module]
+    N -->|13| O[Explanations]
+    M -->|14| P[Feedback Mechanism]
+    O -->|15| P
+    P -->|16| Q[Reinforcement Learning Module]
+    Q -->|17| R{Update Components}
+    R -->|18a| S[Update Anomaly Detection]
+    R -->|18b| T[Update Threat Classification]
+    R -->|18c| U[Update Explanation Generation]
+    R -->|18d| V[Enhance Weak Supervision]
+    S -->|19| B
+    T -->|20| L
+    U -->|21| N
+    V -->|22| D
 
     classDef dataInput fill:#e0f7fa,stroke:#00838f,stroke-width:1px;
     classDef processing fill:#e8eaf6,stroke:#1a237e,stroke-width:1px;
@@ -39,3 +42,4 @@ Simplified version of my projects designs
     class B,G,D,I,K,L,N processing;
     class P,Q,R feedback;
     class S,T,U,V update;
+    class W processing;
