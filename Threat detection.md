@@ -2,7 +2,6 @@
 Simplified version of my projects designs
 
 ```mermaid
-
    %%{init: {'theme': 'dark', 'themeVariables': { 'primaryColor': '#ff9800', 'lineColor': '#a0a0a0'}}}%%
 graph TD
     A[Structured Data Input] -->|1| B[Anomaly Detection Module<br/>Isolation Forest]
@@ -53,15 +52,18 @@ graph TD
     L -->|Human Feedback| HL[Human Feedback Loop]
     HL -->|Adjust Hyperparameters or Retrain| T
 
-    classDef dataInput fill:#4caf50,stroke:#81c784,stroke-width:2px,color:#e8f5e9;
-    classDef processing fill:#2196f3,stroke:#64b5f6,stroke-width:2px,color:#e3f2fd;
-    classDef feedback fill:#ff9800,stroke:#ffb74d,stroke-width:2px,color:#fff3e0;
-    classDef update fill:#e91e63,stroke:#f06292,stroke-width:2px,color:#fce4ec;
+    classDef dataInput fill:#4caf50,stroke:#81c784,stroke-width:2px;
+    classDef processing fill:#2196f3,stroke:#64b5f6,stroke-width:2px;
+    classDef feedback fill:#ff9800,stroke:#ffb74d,stroke-width:2px;
+    classDef update fill:#e91e63,stroke:#f06292,stroke-width:2px;
     class A,F,AA,FF dataInput;
     class B,G,I,K,L,N,C,H,J,M,O,AA,FF processing;
     class P,Q,R feedback;
     class S,T,U,V,W update;
-    class HL fill:#ff9800,stroke:#ffb74d,stroke-width:2px,color:#fff3e0;
+    class HL fill:#ff9800,stroke:#ffb74d,stroke-width:2px;
+
+   
+    
 
    
         
