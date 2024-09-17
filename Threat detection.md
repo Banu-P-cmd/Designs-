@@ -27,9 +27,11 @@ graph TD
     S -->|17a| T[Update Threat Classification]
     S -->|17b| U[Update Summary Generation]
     S -->|17c| V[Enhance Weak Supervision]
+    S -->|17d| W[Update Isolation Forest]
     T -->|18| L
     U -->|19| N
     V -->|20| Q
+    W -->|21| B
 
     classDef dataInput fill:#4caf50,stroke:#81c784,stroke-width:2px,color:#e8f5e9;
     classDef processing fill:#2196f3,stroke:#64b5f6,stroke-width:2px,color:#e3f2fd;
@@ -38,5 +40,4 @@ graph TD
     class A,F dataInput;
     class B,G,I,K,L,N,C,H,J,M,O processing;
     class P,Q,R feedback;
-    class S,T,U,V update; 
-   
+    class S,T,U,V,W update;
