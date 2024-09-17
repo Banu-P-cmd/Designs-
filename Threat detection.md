@@ -4,7 +4,8 @@ Simplified version of my projects designs
 ```mermaid
 
    %%{init: {'theme': 'dark', 'themeVariables': { 'primaryColor': '#ff9800', 'lineColor': '#a0a0a0'}}}%%
-graph TD
+
+    graph TD
     A[Structured Data Input] -->|1| B[Anomaly Detection Module<br/>Isolation Forest]
     F[Unstructured Data Input] -->|2| G[Feature Extraction]
     G -->|3| H[Unstructured Data Features]
@@ -33,11 +34,24 @@ graph TD
     V -->|20| Q
     W -->|21| B
 
+    %% Adversarial Data Flow
+    A -->|Adversarial Data Generation| AA[Generate Adversarial Structured Data]
+    F -->|Adversarial Data Generation| FF[Generate Adversarial Unstructured Data]
+    AA -->|Adversarial Structured Data| B
+    FF -->|Adversarial Unstructured Data| G
+    AA -->|Inject Adversarial Data| L
+    FF -->|Inject Adversarial Data| L
+    L -->|Adversarial Classification Results| P
+    P -->|Adversarial Feedback| R
+    R -->|Refine Adversarial Handling| S
+    S -->|Refine Adversarial Defenses| T
+    S -->|Refine Adversarial Defenses| W
+
     classDef dataInput fill:#4caf50,stroke:#81c784,stroke-width:2px,color:#e8f5e9;
     classDef processing fill:#2196f3,stroke:#64b5f6,stroke-width:2px,color:#e3f2fd;
     classDef feedback fill:#ff9800,stroke:#ffb74d,stroke-width:2px,color:#fff3e0;
     classDef update fill:#e91e63,stroke:#f06292,stroke-width:2px,color:#fce4ec;
-    class A,F dataInput;
-    class B,G,I,K,L,N,C,H,J,M,O processing;
+    class A,F,AA,FF dataInput;
+    class B,G,I,K,L,N,C,H,J,M,O,AA,FF processing;
     class P,Q,R feedback;
     class S,T,U,V,W update;
