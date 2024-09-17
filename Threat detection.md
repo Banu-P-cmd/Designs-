@@ -42,9 +42,12 @@ Simplified version of my projects designs
     AA -->|Inject Adversarial Data| L
     FF -->|Inject Adversarial Data| L
     L -->|Adversarial Classification Results| P
+    FF -->|Inject Adversarial Text| N
+    N -->|Adversarial Summaries| P
     P -->|Adversarial Feedback| R
     R -->|Refine Adversarial Handling| S
     S -->|Refine Adversarial Defenses| T
+    S -->|Refine Adversarial Summarization| U
     S -->|Refine Adversarial Defenses| W
 
     classDef dataInput fill:#4caf50,stroke:#81c784,stroke-width:2px,color:#e8f5e9;
