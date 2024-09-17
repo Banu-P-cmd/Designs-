@@ -14,19 +14,19 @@ Simplified version of my projects designs
     I -->|6| J[Structured Data Features]
     J -->|7a| K[Feature Combiner]
     H -->|7b| K
-    K -->|8| L[Threat Classification Module<br/>RLAIF Neural Network]
+    K -->|8| L[Threat Classification Module<br/>XGBoost]
     L -->|9| M[Threat Assessments]
-    M -->|10| N[Summary Generation Module<br/>T5 Model]
+    M -->|10| N[Summary Generation Module<br/>T5 Model with PPO]
     N -->|11| O[Explanations and Summaries]
     M -->|12a| P[Feedback Mechanism]
     O -->|12b| P
     P -->|13| Q[Weak Supervision Module]
     Q -->|14a| L
     Q -->|14b| N
-    P -->|15| R[Reinforcement Learning Module]
+    P -->|15| R[Reinforcement Learning Module<br/>PPO for T5]
     R -->|16| S{Update Components}
-    S -->|17a| T[Update Threat Classification]
-    S -->|17b| U[Update Summary Generation]
+    S -->|17a| T[Update Threat Classification<br/>XGBoost]
+    S -->|17b| U[Update Summary Generation<br/>T5 with PPO]
     S -->|17c| V[Enhance Weak Supervision]
     S -->|17d| W[Update Isolation Forest]
     T -->|18| L
@@ -58,3 +58,6 @@ Simplified version of my projects designs
     class B,G,I,K,L,N,C,H,J,M,O,AA,FF processing;
     class P,Q,R feedback;
     class S,T,U,V,W update;
+
+    
+    
