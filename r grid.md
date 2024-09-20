@@ -1,3 +1,8 @@
+# Designs-
+Simplified version of my projects designs
+
+```mermaid
+
 graph TD
     A[Client] -->|HTTP Request| B[Flask App]
     B -->|Load Models| C[Pre-trained Models]
