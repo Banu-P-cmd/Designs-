@@ -2,10 +2,17 @@
 
 graph TD
     A[User] -->|Designs in Figma| B(Figma Design)
-    B --> C{LLM}
-    D[User's Design Repo] -->|Vector Embeddings| E[RAG System]
-    E -->|Relevant Documents| C
-    C --> F[React Code Generator]
-    F -->|Generated React Code| G[Code Review]
-    G -->|Feedback| H[RLHF System]
-    H -->|Model Updates| C
+    B --> C[Computer Vision Module]
+    C --> D{LLM}
+    E[User's Design Repo] -->|Vector Embeddings| F[RAG System]
+    F -->|Relevant Documents| D
+    D --> G[React Code Generator]
+    G -->|Generated React Code| H[Code Review]
+    H -->|Feedback| I[RLHF System]
+    I -->|Model Updates| D
+
+    subgraph Computer Vision Module
+        J[Image Processing] --> K[Feature Extraction]
+        K --> L[Object Detection]
+        L --> M[Layout Analysis]
+    end
