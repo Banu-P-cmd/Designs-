@@ -11,8 +11,7 @@ Simplified version of my projects designs
         D[Elastic Search]
         E[CBERT Embedding]
         F[RAG System]
-        G[Document Ranking]
-        H[Similarity Calculator]
+        G[Document Ranking with FLAIS]
         I[Fine-Tuning for RAG]
         J[GPT API]
         K[Response Formatter]
@@ -24,9 +23,8 @@ Simplified version of my projects designs
         D --> E
         E --> F
         F --> G
-        G --> H
         I --> F
-        H --> J
+        G --> J
         J --> K
         K --> L
         L --> M
@@ -43,9 +41,9 @@ Simplified version of my projects designs
     classDef high fill:#FF9800,stroke:#333,color:#000
     classDef veryhigh fill:#F44336,stroke:#333,color:#fff
     class A,D low
-    class C,G,H,K,L medium
+    class C,K,L medium
     class E,F,I,M,N high
-    class B,J,O veryhigh
+    class B,G,J,O veryhigh
     %% Legend
     subgraph Complexity_Legend
         Z1[Low Complexity]:::low
