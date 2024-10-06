@@ -28,7 +28,7 @@ graph TD
     K --> L[Derived Features]
     L --> M[Final ML Feature Set]
     
-    M --> N[ML Model Training<br>XGBoost/Random Forest]
+    M --> N[ML Model Training<br>Random Forest]
     N --> O[ML: Predicted Cost Savings]
     
     I --> P{Compare Estimates}
