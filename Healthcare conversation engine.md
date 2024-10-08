@@ -13,7 +13,7 @@ Simplified version of my projects designs
         F[RAG System]
         G[Document Ranking with FLAIS]
         I[Fine-Tuning for RAG]
-        J[GPT API]
+        J[Llama]
         K[Response Formatter]
         L[Accuracy Checker]
         M[Data Generator]
