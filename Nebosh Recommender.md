@@ -3,13 +3,12 @@ Nebosh recommender
 
 ```mermaid
 
-graph TD
+   flowchart TD
     A[Input Data] --> DR[Data Regulation Compliance]
     DR --> B[Data Preprocessor]
     B --> C[Collaborative Filtering Model]
     B --> D[Content-Based Filtering Model]
-    C --> E[Hybrid Recommender System]
-    D --> E
+    C & D --> E[Hybrid Recommender System]
     E --> CM[Causal Model]
     CM --> F[Recommendation Generator]
     F --> G1[Student Recommendations]
@@ -18,20 +17,15 @@ graph TD
     G2 --> AB2[Affiliate A/B Testing]
     AB1 --> H1[Student Interaction]
     AB2 --> H2[Affiliate Interaction]
-    H1 --> I[Feedback Collector]
-    H2 --> I
+    H1 & H2 --> I[Feedback Collector]
     I --> K[Model Update Manager]
-    K -->|Update Models| C
-    K -->|Update Models| D
-    K -->|Update Causal Model| CM
-    K -->|Update Preprocessor| B
-    K -->|Optimize A/B Tests| AB1
-    K -->|Optimize A/B Tests| AB2
     K <--> PBI[Power BI Dashboard]
+    K -->|Update Models| C & D & E & CM
+    K -->|Update Preprocessor| B
+    K -->|Optimize A/B Tests| AB1 & AB2
     H1 -->|Expert Feedback| EF1[Education Expert Feedback]
     H2 -->|Expert Feedback| EF2[Partnership Expert Feedback]
-    EF1 --> I
-    EF2 --> I
+    EF1 & EF2 --> I
 
     subgraph "Core Recommender Engine"
     C
@@ -75,3 +69,4 @@ graph TD
     class I,K feedback;
     class DR compliance;
     class PBI analytics;
+    
