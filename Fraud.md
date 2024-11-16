@@ -1,5 +1,5 @@
 # Designs-
-Nebosh fraud
+Generic fraud
 ```mermaid
 
 flowchart TD
