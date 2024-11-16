@@ -31,8 +31,8 @@ graph TD
     Q -->|18b| N
     P -->|19| R[Reinforcement Learning Module<br/>PPO for T5]
     R -->|20| S{Update Components}
-    S -->|21a| T[Update Threat Classification<br/>XGBoost with Human Feedback]
-    S -->|21b| U[Update Summary Generation<br/>T5 with PPO]
+    S -->|21a| T[Update Threat Classification<br/>]
+    S -->|21b| U[Update Summary Generation<br/>]
     S -->|21c| V[Enhance Weak Supervision]
     S -->|21d| W[Update Isolation Forest]
     S -->|21e| SB[Update SecureBERT]
