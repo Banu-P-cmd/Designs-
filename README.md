@@ -1,1 +1,1 @@
-Simplified designs my projects
+Simplified designs of my projects
